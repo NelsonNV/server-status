@@ -30,9 +30,9 @@ def consulta_ping(host):
 
 def mostrar_mensaje(service_name, result):
     if result["status"]:
-        print(f'[+] {service_name} time: {result["time"]}')
+        print(f'[+] {service_name}\t time: {result["time"]}')
     elif not result["status"]:
-        print(f'[-] {service_name} time: {result["time"]}')
+        print(f'[-] {service_name}\t time: {result["time"]}')
 
 
 if __name__ == "__main__":
