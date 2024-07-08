@@ -22,7 +22,7 @@ def agregar_dato(file="server.json", service_name="", dns="", ip="", alt=""):
 def consulta_ping(host):
     request = ping(host)
     result = {"status": True, "time": request}
-    if request is None:
+    if request is None or request is False:
         result = {"status": False, "time": "Sin conexion"}
 
     return result
