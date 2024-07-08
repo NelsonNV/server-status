@@ -1,4 +1,6 @@
 import json
+from ping3 import ping, verbose_ping
+
 
 def leer_json(file="server.json"):
     with open(file, "r") as lectura:
@@ -15,4 +17,13 @@ def agregar_dato(file="server.json", service_name="", dns="", ip="", alt=""):
 
     with open(file, "w") as escritura:
         json.dump(data, escritura, indent=4)
+
+
+def consulta_ping(host):
+    request = ping(host)
+    result = {"status": True, "time": request}
+    if request is None:
+        result = {"status": False, "time": "Sin conexion"}
+
+    return result
 
