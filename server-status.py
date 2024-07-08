@@ -27,3 +27,11 @@ def consulta_ping(host):
 
     return result
 
+
+def mostrar_mensaje(service_name, result):
+    if result["status"]:
+        print(f'[+] {service_name} time: {result["time"]}')
+    elif not result["status"]:
+        print(f'[-] {service_name} time: {result["time"]}')
+
+
