@@ -37,6 +37,8 @@ def mostrar_mensaje(service_name, result):
 
 if __name__ == "__main__":
     servidores = leer_json()
-    for key in servidores:
-        result = consulta_ping(servidores[key]["dns"])
-        mostrar_mensaje(key, result)
+    for server in servidores:
+        print(f"------[ {server} ]-------")
+        for ip in servidores[server]:
+            result = consulta_ping(servidores[server][ip])
+            mostrar_mensaje(ip, result)
