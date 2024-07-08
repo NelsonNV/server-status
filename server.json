@@ -1,0 +1,12 @@
+{
+    "google": {
+        "dns": "google.cl",
+        "ip": "8.8.8.8",
+        "alt": "8.8.4.4"
+    },
+    "cloudflare": {
+        "dns": "one.one.one.one",
+        "ip": "1.1.1.1",
+        "alt": "1.0.0.1."
+    }
+}
